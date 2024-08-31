@@ -46,7 +46,7 @@ A Place is comprised of two main parts: GeoJSON defines the geospatial structure
     ["name", "Zahradní Restaurace Letenský Zámeček"], // name property
     ["opening_hours", "Mo-Fr_6:00-20:00,Sa-Su_6:00-17:00"], // opening_hours property
     ["logo_url", "https://nostr.build/logo.png"], // logo_url property
-    ["r", "R4469371", "osm_ref"], // osm_ref is a combination of the OSM type (the letter at the front of the string) and OSM ID (which is the numerical value following the letter
+    ["i", "R4469371", "osm_ref"], // osm_ref is a combination of the OSM type (the letter at the front of the string) and OSM ID (which is the numerical value following the letter
     ["amenity", "biergarten"], // OSM amenity tag
     ["country", "Czech"], // country property
     ["contributor", "5c83da77af1dec6d7289834998ad7aafbd9e2191396d75ec3cc27f5a77226f36"]
@@ -84,7 +84,7 @@ A subset of OpenStreeMaps tags have been seleceted to create a standard list of 
 | Tag Key  | Tag Value                        | Example    | Other Values |
 | -------- | -------------------------------- | ---------- | ------------ |
 | `"name"` | The name for the Place           |            |              |
-| `"r"`    | OSM Type and OSM ID concatenated | "R4469371" | "osm_ref"    |
+| `"i"`    | OSM Type and OSM ID concatenated | "R4469371" | "osm_ref"    |
 
 #### Optional Properties
 
@@ -133,7 +133,7 @@ The Place creator can designate other pubkeys via `"contributor"` tags. If these
 
 - `"d"` tag is necessary for a replaceable event if you desire to make more than one of them.
 - `"g"` tag MUST be present and as accurate to the GeoJSON geometry as possible. This allows for indexed relay queries to retrieve Places in an area. Retrieving Places based on the geohash closest to the screen's viewport will be the primary method of retrieving Places from relays.
-- `"r"` tab may be present and is used to include the OSM ID and OSM Type which are concatenated like this: `"R4469371"`. The second value should be "`osm_ref`".
+- `"i"` tab may be present and is used to include the OSM ID and OSM Type which are concatenated like this: `"R4469371"`. The second value should be "`osm_ref`".
 - `"expiration"` may be used for temporary Places such as marking a speed trap.
 
 ## Property Application Kind 1754
